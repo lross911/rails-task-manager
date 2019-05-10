@@ -1,0 +1,11 @@
+<h1>Tasks</h1>
+
+<% @tasks.each do |task| %>
+<h1><%= link_to task.title, task_path(task) %></h1>
+<h1><%= task.details %></h1>
+<% if task.completed %>
+<p> Yes </p>
+<% else  %>
+<p> No </p>
+<% end %>
+<% end %>
